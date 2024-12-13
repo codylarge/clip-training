@@ -36,6 +36,10 @@ def load_random_images(dataset_dir, split='train', num_images=8):
 
     return images_and_classes
 
+
+
+
+
 def load_specific_images(dataset_dir, split='train', classes=[]):
     split_dir = os.path.join(dataset_dir, split)
 
@@ -57,8 +61,8 @@ def load_specific_images(dataset_dir, split='train', classes=[]):
         if not image_files:
             continue
 
-        #selected_image_file = image_files[0]  # First image
-        selected_image_file = random.choice(image_files)  # Random image
+        selected_image_file = image_files[1]  # Second image
+        #selected_image_file = random.choice(image_files)  # Random image
         image_path = os.path.join(class_dir, selected_image_file)
 
         # Load image and store with its class name
